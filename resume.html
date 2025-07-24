@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Resume</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: #ffffff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.8rem;
+      color: #d946ef;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .resume-viewer {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 30px;
+      width: 100%;
+    }
+
+    iframe {
+      width: 90vw;
+      height: 85vh;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .download-container {
+      background-color: #0f172a;
+      padding: 30px 20px 50px;
+    }
+
+    .download-container a {
+      display: inline-block;
+      margin: 12px 15px;
+      padding: 16px 34px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      background-color: #3b82f6;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .download-container a:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      iframe {
+        height: 70vh;
+        width: 95vw;
+      }
+
+      .download-container a {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Resume</h1>
+  <p>Here's a look at my professional profile. You can view it directly or download it.</p>
+
+  <div class="resume-viewer">
+    <iframe src="assets/Hemath ATS Resume 2025.pdf"></iframe>
+  </div>
+
+  <div class="download-container">
+   <a href="./assets/Hemath ATS Resume 2025.pdf" download="assets/Hemath ATS Resume 2025.pdf">⬇️ Download Resume</a>
+
+  </div>
+
+</body>
+</html>
