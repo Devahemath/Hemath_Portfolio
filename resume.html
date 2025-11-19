@@ -28,6 +28,27 @@
       margin-bottom: 20px;
     }
 
+    .resume-buttons {
+      margin-top: 20px;
+    }
+
+    .resume-buttons button {
+      margin: 10px;
+      padding: 12px 28px;
+      background-color: #9333ea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .resume-buttons button:hover {
+      background-color: #7e22ce;
+      transform: translateY(-2px);
+    }
+
     .resume-viewer {
       flex: 1;
       display: flex;
@@ -43,11 +64,6 @@
       border: none;
       border-radius: 12px;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-    }
-
-    .download-container {
-      background-color: #0f172a;
-      padding: 30px 20px 50px;
     }
 
     .download-container a {
@@ -67,40 +83,30 @@
       background-color: #2563eb;
       transform: translateY(-2px);
     }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      iframe {
-        height: 70vh;
-        width: 95vw;
-      }
-
-      .download-container a {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
-
   <h1>My Resume</h1>
-  <p>Here's a look at my professional profile. You can view it directly or download it.</p>
+  <p>Select which resume you want to view</p>
+
+  <div class="resume-buttons">
+    <button onclick="showResume('Hemath_main_Resume.pdf')">Resume Style 1</button>
+    <button onclick="showResume('Hemath_Resume_2025.pdf')">Resume Style 2</button>
+  </div>
 
   <div class="resume-viewer">
-    <iframe src="Hemath_Resume_2025.pdf"></iframe>
+    <iframe id="resumeFrame" src="Hemath_main_Resume.pdf"></iframe>
   </div>
 
   <div class="download-container">
-   <a href="Hemath_Resume_2025.pdf" download="Hemath_Resume_2025.pdf">⬇️ Download Resume</a>
-
+    <a id="downloadBtn" href="Hemath_main_Resume.pdf" download>⬇️ Download Selected Resume</a>
   </div>
 
+  <script>
+    function showResume(file) {
+      document.getElementById("resumeFrame").src = file;
+      document.getElementById("downloadBtn").href = file;
+    }
+  </script>
 </body>
 </html>
